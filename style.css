@@ -3,13 +3,18 @@
     padding: 0;
     font-family: outfit;
 }
+:root{
+    --first:white;
+    --second:#ebae3d;
+    --third:black;
+}
 
 body{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: rgb(55, 186, 238);
+    background-color: var(--second);
     flex-wrap: wrap;
 }
 .box{
@@ -21,7 +26,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(243, 241, 241);
+    background-color: var(--first);
     border-radius: 10px;
     cursor: pointer;
     box-shadow: 0 30px 60px rgba(0,0,0,.2);
@@ -36,26 +41,27 @@ body{
     height: 150px;
     fill: none;
     stroke-width: 10;
-    stroke: rgb(5, 5, 5);
+    stroke: var(--third);
     transform: translate(5px,5px);
     stroke-dasharray: 440;
     stroke-dashoffset: 440;
+    stroke-linecap: round;
 }
 .box .percent svg circle:nth-child(1){
    stroke-dashoffset: 0;
-   stroke: #b4b2b2; 
+   stroke: #e0e0e0; 
 }
 .box .percent svg .html{
     stroke-dashoffset: calc(440 - (440 * 96) / 100);
-    stroke: #1e8ba7;
+    stroke: var(--second);
 }
 .box .percent svg .css{
     stroke-dashoffset: calc(440 - (440 * 87) / 100);
-    stroke: #1e8ba7;
+    stroke: var(--second);
 }
 .box .percent svg .js{
     stroke-dashoffset: calc(440 - (440 * 80) / 100);
-    stroke: #1e8ba7;
+    stroke: var(--second);
 }
 .box .percent .number{
     position: absolute;
@@ -66,7 +72,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #222;
+    color: var(--third);
 }
 .box .percent .number h2{
     font-size: 45px ;
@@ -77,13 +83,11 @@ body{
 
 .box .text{
     padding: 30px 0 0;
-    color: #222;
+    color: var(--third);
     letter-spacing: 1.3px;
 }
 
-.box:hover{
-    transform: scale(1.05);
-    transition: .5s;
+.box:hover {
+    transform: translateY(-10px);
+    transition: ease .5s;
 }
-
-
