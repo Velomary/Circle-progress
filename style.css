@@ -81,5 +81,9 @@ body{
     letter-spacing: 1.3px;
 }
 
+.box:hover{
+    transform: scale(1.05);
+    transition: .5s;
+}
 
 
