@@ -5,7 +5,7 @@
 }
 :root{
     --first:white;
-    --second:#ebae3d;
+    --second:#eb8b3d;
     --third:black;
 }
 
@@ -27,9 +27,10 @@ body{
     align-items: center;
     flex-direction: column;
     background-color: var(--first);
-    border-radius: 10px;
+    border-radius: 16px;
     cursor: pointer;
     box-shadow: 0 30px 60px rgba(0,0,0,.2);
+    
 }
 .box .percent, .box .percent svg{
     position: relative;
@@ -54,14 +55,19 @@ body{
 .box .percent svg .html{
     stroke-dashoffset: calc(440 - (440 * 96) / 100);
     stroke: var(--second);
+    animation: animate 1.5s ;
 }
 .box .percent svg .css{
     stroke-dashoffset: calc(440 - (440 * 87) / 100);
     stroke: var(--second);
+    animation: animate 1.5s backwards;
+    animation-delay: .5s;
 }
 .box .percent svg .js{
     stroke-dashoffset: calc(440 - (440 * 80) / 100);
     stroke: var(--second);
+    animation: animate 1.5s backwards;
+    animation-delay: .3s;
 }
 .box .percent .number{
     position: absolute;
@@ -88,6 +94,38 @@ body{
 }
 
 .box:hover {
-    transform: translateY(-10px);
+    transform: translateY(-7%);
     transition: ease .5s;
+}
+
+.first{
+    animation: boxanim 1s;
+}
+.second{
+    animation: boxanim 1s;
+    animation-delay: .5s;
+}
+.third{
+    animation: boxanim 1s;
+    animation-delay: .3s;
+}
+@keyframes boxanim {
+    0%{
+        
+        transform: translateY(0%);
+    }
+    50%{
+        transform: translateY(-7%);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0%);
+
+    }
+}
+    
+@keyframes animate{
+    0%{
+        stroke-dashoffset: 440;
+    }
 }
