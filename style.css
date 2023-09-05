@@ -1,15 +1,20 @@
+@import url(./word.css);
 *{
     margin: 0;
     padding: 0;
-    font-family: outfit;
+    box-sizing: border-box;
 }
 :root{
     --first:white;
-    --second:#eb8b3d;
+    --second:#f07f23;
     --third:black;
 }
-
-body{
+@font-face{
+    font-family: myFont;
+    src: url(./Agustine\ Script.ttf);
+}
+.circles{
+    font-family: outfit;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,6 +22,7 @@ body{
     background-color: var(--second);
     flex-wrap: wrap;
 }
+
 .box{
     position: relative;
     width: 270px;
@@ -29,7 +35,7 @@ body{
     background-color: var(--first);
     border-radius: 16px;
     cursor: pointer;
-    box-shadow: 0 30px 60px rgba(0,0,0,.2);
+    box-shadow: 0 30px 60px rgba(0,0,0,.5);
     
 }
 .box .percent, .box .percent svg{
