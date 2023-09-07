@@ -6,7 +6,7 @@
 }
 :root{
     --first:white;
-    --second:#f07f23;
+    --second:#c01db2;
     --third:black;
 }
 @font-face{
@@ -21,6 +21,7 @@
     min-height: 100vh;
     background-color: var(--second);
     flex-wrap: wrap;
+    position: relative;
 }
 
 .box{
@@ -36,6 +37,7 @@
     border-radius: 16px;
     cursor: pointer;
     box-shadow: 0 30px 60px rgba(0,0,0,.5);
+    z-index: 2;
     
 }
 .box .percent, .box .percent svg{
@@ -135,3 +137,14 @@
         stroke-dashoffset: 440;
     }
 }
+@media screen and (max-width: 950px) {
+    .circles {
+        min-height: 165vh;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .circles {
+        min-height: 180vh;
+    }
+  }
